@@ -1,0 +1,27 @@
+{
+  "name": "notesapp-backend",
+  "version": "1.0.0",
+  "description": "backend app for taking notes",
+  "main": "main.js",
+  "scripts": {
+    "lint:fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuttingEdgeCoders/notesapp-backend.git"
+  },
+  "author": "CuttingEdge Coders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CuttingEdgeCoders/notesapp-backend/issues"
+  },
+  "homepage": "https://github.com/CuttingEdgeCoders/notesapp-backend#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.20.1",
+    "pino": "^7.0.0-rc.2"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
