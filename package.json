@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "backend app for taking notes",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "lint:fix": "standard --fix"
   },
@@ -19,6 +20,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "fastify": "^3.20.1",
+    "mongoose": "^5.13.5",
     "pino": "^7.0.0-rc.2"
   },
   "devDependencies": {

@@ -1,7 +1,9 @@
-const env = require('./configs/environments');
+'use strict'
+const fastify = require('fastify')
+const app = fastify({ logger: true })
 
-
-process.on('unhandledRejection', err => {
-  console.error(err)
-  process.exit(1)
+app.get('/health', async (req, rep) => {
+  return { ok: true }
 })
+
+module.exports = app
