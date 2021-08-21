@@ -1,8 +1,8 @@
-import { Schema, model } from 'mongoose'
+import mongoose from 'mongoose'
 
-const UsersSchema = new Schema({
+const UsersSchema = new mongoose.Schema({
   name: String,
   theme: String
 })
 
-export const UsersModel = model('users', UsersSchema)
+export const UsersModel = mongoose.model('users', UsersSchema)
