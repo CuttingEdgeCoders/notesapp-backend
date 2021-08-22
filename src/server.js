@@ -1,11 +1,11 @@
-'use strict'
-const main = require('./main')
-const logger = require('./utils/logger')
-const { SERVER: { PORT } } = require('./configs')
+import main from './main.js'
+import logger from './utils/logger.js'
+import { SERVER } from './configs/index.js'
 
 const start = async () => {
   try {
-    await main.listen(PORT)
+    await main.listen(SERVER.PORT)
+    logger.info(`Server running at http://localhost:${SERVER.PORT}`)
   } catch (err) {
     logger.error(err)
     process.exit(1)

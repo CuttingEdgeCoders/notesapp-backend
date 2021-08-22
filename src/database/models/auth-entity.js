@@ -2,9 +2,6 @@ import { Model } from '../schemas/auth.js'
 
 export default class AuthEntity {
   constructor () {
-    /**
-     * @type {mongoose.Model}
-     */
     this.authInstance = Model
   }
 

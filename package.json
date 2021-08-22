@@ -2,9 +2,10 @@
   "name": "notesapp-backend",
   "version": "1.0.0",
   "description": "backend app for taking notes",
-  "main": "main.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
+    "start:dev": "NODE_ENV=development node src/server.js",
     "lint:fix": "standard --fix",
     "lint": "standard",
     "prepare": "husky install",

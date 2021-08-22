@@ -1,9 +1,8 @@
-'use strict'
-const fastify = require('fastify')
-const app = fastify({ logger: true })
+import fastify from 'fastify'
+const app = fastify()
 
-app.get('/health', async (req, rep) => {
+app.get('/health', async () => {
   return { ok: true }
 })
 
-module.exports = app
+export default app
