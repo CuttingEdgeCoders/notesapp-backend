@@ -1,7 +1,7 @@
-'use strict'
-const { SERVER: { ENV } } = require('../configs')
-const { supportedEnvs } = require('../configs/constants')
-const logger = require('pino')({
-  level: ENV === supportedEnvs.DEVELOPMENT ? 'debug' : 'error'
+import pino from 'pino'
+import { SERVER } from '../configs/index.js'
+import { supportedEnvs } from '../configs/constants.js'
+export default pino({
+  name: 'serverErrors',
+  level: SERVER.ENV === supportedEnvs.DEVELOPMENT ? 'debug' : 'error'
 })
-module.exports = logger

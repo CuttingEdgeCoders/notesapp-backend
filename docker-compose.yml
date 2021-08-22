@@ -1,0 +1,9 @@
+services:
+  notes-db: 
+   image: mongo
+   restart: always
+   mem_limit: 600m
+   ports:
+    - "27017:27017"
+   volumes:
+    - /home/axele/docker-volumenes/notes-app/mongo:/data/db

@@ -1,8 +1,8 @@
-import { Schema, ObjectId, model } from 'mongoose'
+import mongoose from 'mongoose'
 
-const AttachmentsSchema = new Schema({
+const AttachmentsSchema = new mongoose.Schema({
   name: String,
-  noteId: ObjectId
+  noteId: mongoose.ObjectId
 })
 
-export const AttachmentsModel = model('attachments', AttachmentsSchema)
+export const AttachmentsModel = mongoose.model('attachments', AttachmentsSchema)

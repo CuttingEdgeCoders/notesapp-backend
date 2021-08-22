@@ -5,7 +5,13 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "lint": "standard",
+    "prepare": "husky install",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "repository": {
     "type": "git",
@@ -18,12 +24,16 @@
   },
   "homepage": "https://github.com/CuttingEdgeCoders/notesapp-backend#readme",
   "dependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "dotenv": "^10.0.0",
     "fastify": "^3.20.1",
     "mongoose": "^5.13.5",
     "pino": "^7.0.0-rc.2"
   },
   "devDependencies": {
-    "standard": "^16.0.3"
+    "husky": "^7.0.0",
+    "standard": "^16.0.3",
+    "standard-version": "^9.3.1"
   }
 }

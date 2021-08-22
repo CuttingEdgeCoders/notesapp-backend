@@ -3,6 +3,7 @@
 
 # Variables
 *.env
+!example.env
 
 # Logs
 logs

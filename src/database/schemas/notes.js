@@ -1,7 +1,7 @@
-import { Schema, ObjectId, model } from 'mongoose'
+import mongoose from 'mongoose'
 
-const NotesSchema = new Schema({
-  userId: ObjectId,
+const NotesSchema = new mongoose.Schema({
+  userId: mongoose.ObjectId,
   title: String,
   description: String,
   background: String,
@@ -10,4 +10,4 @@ const NotesSchema = new Schema({
   trashedAt: Date
 })
 
-export const NotesModel = model('notes', NotesSchema)
+export const NotesModel = mongoose.model('notes', NotesSchema)
