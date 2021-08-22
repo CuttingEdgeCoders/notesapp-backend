@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "backend app for taking notes",
   "main": "src/server.js",
-  "type": "module",
   "scripts": {
-    "start:dev": "NODE_ENV=development node src/server.js",
+    "start:dev": "NODE_ENV=development nodemon src/server.js",
     "lint:fix": "standard --fix",
     "lint": "standard",
     "prepare": "husky install",
@@ -29,11 +28,13 @@
     "@commitlint/config-conventional": "^13.1.0",
     "dotenv": "^10.0.0",
     "fastify": "^3.20.1",
+    "joi": "^17.4.2",
     "mongoose": "^5.13.5",
     "pino": "^7.0.0-rc.2"
   },
   "devDependencies": {
     "husky": "^7.0.0",
+    "nodemon": "^2.0.12",
     "standard": "^16.0.3",
     "standard-version": "^9.3.1"
   }

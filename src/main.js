@@ -1,8 +1,9 @@
-import fastify from 'fastify'
-const app = fastify()
+const logger = require('./utils/logger')
+const fastify = require('fastify')
+const app = fastify({ logger })
 
 app.get('/health', async () => {
   return { ok: true }
 })
 
-export default app
+module.exports = app
